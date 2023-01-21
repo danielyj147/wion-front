@@ -1,15 +1,18 @@
 import { DefaultTheme } from "styled-components";
 
 const colors = {
-  black: "#1e1f1d",
-  yellow: "#edb83c",
-  orange: "#eb7952",
-  gray: "#6e6e6e",
-  gray_background: "#f5f5f5",
+  font: "#1e1f1d",
+  modal: "#edb83c",
+  button: "#eb7952",
+  subfont: "#6e6e6e",
+  background: "#f5f5f5",
 };
 
 export type ColorsTypes = typeof colors;
 
-export const defaultTheme: DefaultTheme = {
+export const light: DefaultTheme = {
+  colors,
+};
+export const dark: DefaultTheme = {
   colors,
 };

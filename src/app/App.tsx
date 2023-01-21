@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../Styles/GlobalStyle";
-import { defaultTheme } from "../Styles/Themes";
+import { light, dark } from "../Styles/Themes";
 
 function App() {
+  const [theme, setTheme] = useState(light);
+
+  
+
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div>
         <h1>Hi, My name is Daniel Jeong</h1>

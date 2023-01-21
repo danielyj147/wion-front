@@ -12,8 +12,8 @@ ${reset}
         line-height: 1.5;
         margin:0;
         padding:0;
-        color: ${(props) => props.theme.colors.black};
-        background-color: ${(props) => props.theme.colors.gray_background};
+        color: ${(props) => props.theme.colors.font};
+        background-color: ${(props) => props.theme.colors.background};
       }
 
       @media only screen and (max-width: 768px) {
