@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ThemeI } from "../Styles/Themes";
+import { ThemeI } from "../styles/Themes";
 
 export const useDarkMode = () => {
   // 유저의 기본 설정이 다크 모드인지 확인

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { useDarkMode } from "../hooks/useDarkMode";
-import GlobalStyle from "../Styles/GlobalStyle";
-import { dark, light } from "../Styles/Themes";
+import GlobalStyle from "../styles/GlobalStyle";
+import { dark, light } from "../styles/Themes";
 
 // 다중언어지원 관련 라이브러리
 import { useTranslation } from "react-i18next";

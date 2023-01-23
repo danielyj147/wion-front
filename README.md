@@ -39,7 +39,37 @@ yarn start
 - languages - 영어, 한국어와 같은 언어와 관련된 정보/설정을 보관하는 폴더
 - pages - MyPage, 지도 페이지 등등 큰 범위의 컴포넌트를 담는 폴더
 - resource - 사진, 음악, 아이콘 등등 로직외의 요소들이 저장되는 폴더
-- Styles - 디자인, 테마 관련 파일들이 존재하는 폴더
+- styles - 전체적인 프로젝트의 디자인, 테마의 로직 관련 파일들이 존재하는 폴더
+
+> styled-components 파일 구조
+>
+> - components
+>   - main-button
+>     - MainButton.tsx - 실제 컴포넌트, 스타일링된 컴포넌트를 임포트해서 사용함
+>     - StyledMainButton.tsx - 스타일링(styled``)용 컴포넌트
+>
+> **중요!!! MainButton에서 StyledMainButton을 임포트 할때는 일일이 다 임포트 하는 것이 아니라 아래의 커멘드로 직관적이게 한번에 임포트한다**
+>
+> ```js
+> import * as S from "./StyledMainButton"
+>   ...
+> <S.MainButton> ... </S.MainButton>
+> ```
+>
+> 위 처럼 임포트하면 손쉽게 스타일링용 컴포넌트와 일반 컴포넌트를 구분할 수 있다.
+
+## 코딩 컨벤션
+
+-
+
+- 주석: **왜 오류가 날건지 말해주세요!!!**
+  - 좋은 예) // 이 변수는 ~ 에 쓰이기 때문에 ~ 하면 ~ 문제가 날 수 있음
+  - 나쁜 예) 직관적인 이름을 추가되는 정보 없이 그냥 두번 설명하는 주석
+
+```js
+// 숫자
+const [num, setNum] = useState();
+```
 
 ## 다중언어 제공(Language Support) 관련
 
