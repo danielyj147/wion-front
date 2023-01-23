@@ -1,18 +1,18 @@
-interface LangDescr{
-  version: string,
+interface LngDescr {
+  nativeName: string;
 }
 
-interface LanguageListI {
-  [countryName: string]: LangDescr;
+interface LngList {
+  [countryName: string]: LngDescr;
 }
 
-const languageList: LanguageListI = {
-  english: {
-    version: "0.1",
+const lngs: LngList = {
+  en: {
+    nativeName: "English",
   },
-  korean: {
-    version: "0.1",
+  kr: {
+    nativeName: "한국어",
   },
 };
 
-export default languageList
+export { lngs };
