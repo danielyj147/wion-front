@@ -34,8 +34,15 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div>
+        {/* 언어 변경 */}
         <label htmlFor="languages">{t("settings.lang")}</label>
-        <select name="languages" id="languages" onChange={handleLang}>
+        <select
+          name="languages"
+          id="languages"
+          onChange={handleLang}
+          defaultValue="en"
+          defaultChecked={true}
+        >
           {Object.keys(lngs).map((lng) => (
             <option
               key={lng}
@@ -49,19 +56,9 @@ function App() {
           ))}
         </select>
 
-        {/* // <button
-          //   key={lng}
-          //   style={{
-          //     fontWeight: i18n.resolvedLanguage === lng ? "bold" : "normal",
-          //   }}
-          //   type="submit"
-          //   onClick={() => i18n.changeLanguage(lng)}
-          // >
-
-          // </button> */}
-
+        {/* 테마 변경 */}
         <button onClick={handleClick}>This is a Theme Button</button>
-        <h1>{t("description.part1")}</h1>
+        <h1>{t("main.part1")}</h1>
         <h2>hifaskldjfl</h2>
       </div>
     </ThemeProvider>
